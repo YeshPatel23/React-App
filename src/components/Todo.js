@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Todo(props) {
   const remove = () => {
-    props.removeTodo(props.item);
+    props.removeTodo(props.id);
   };
   return (
     <div>
