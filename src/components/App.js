@@ -3,7 +3,7 @@ import TodoList from "./TodoList";
 
 export default function App() {
   return (
-    <div>
+    <div className="lst">
       <TodoList />
     </div>
   );

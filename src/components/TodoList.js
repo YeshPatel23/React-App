@@ -18,6 +18,16 @@ export default function TodoList() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const updateItem = (id, updateTodo) => {
+    const updateTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, task: updateTodo };
+      }
+      return todo;
+    });
+    setTodos(updateTodos);
+  };
+
   const todosData = todos.map((todo) => {
     return (
       <Todo
@@ -25,6 +35,7 @@ export default function TodoList() {
         id={todo.id}
         item={todo.task}
         removeTodo={removeItem}
+        updateData={updateItem}
       />
     );
   });
